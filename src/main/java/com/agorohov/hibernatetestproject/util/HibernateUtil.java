@@ -14,6 +14,7 @@ public class HibernateUtil {
     // конфигурация через Java-код
     private static SessionFactory buildSessionFactory() {
         try {
+            // Можно через Configuration, но этот метод новее и предпочтительнее
             StandardServiceRegistryBuilder registryBuilder = new StandardServiceRegistryBuilder();
 
             registryBuilder.applySetting("hibernate.connection.driver_class", "org.postgresql.Driver");
